@@ -1,0 +1,24 @@
+{
+  "name": "cascading-donations-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "start": "node --require dotenv/config run.js",
+    "dev": "nodemon --require dotenv/config run.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Taump",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.23.1",
+    "fastify-env": "^2.1.1",
+    "node-fetch": "^3.0.0",
+    "obyte": "^0.1.18"
+  }
+}
