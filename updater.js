@@ -37,7 +37,7 @@ export const updater = async () => {
   }).sort((a, b) => b.total_received_in_base - a.total_received_in_base).slice(0, limit);
 
   // get data from github
-  const dataGetter = data.map((repo) => getRepoByFullName(repo.full_name).then((data) => { Object.keys(data).length > 0 && delete repo.full_name; repo.info = data }));
+  const dataGetter = data.map((repo) => getRepoByFullName(repo.full_name).then((data) => { Object.keys(data).length > 0 && delete data.full_name; repo.info = data }));
 
   try {
     await Promise.all(dataGetter);
