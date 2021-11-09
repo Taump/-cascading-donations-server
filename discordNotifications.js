@@ -45,6 +45,15 @@ export const initDiscordNotification = () => {
         }
       }
     });
+
+    const heartbeat = setInterval(function () {
+      obyteInstance.api.heartbeat();
+    }, 10 * 1000);
+
+    obyteInstance.client.ws.addEventListener("close", () => {
+      clearInterval(heartbeat);
+    });
+
   });
 }
 
