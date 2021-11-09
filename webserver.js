@@ -1,8 +1,12 @@
 import fastify from "fastify";
+import CORS from "fastify-cors";
 import store from "./store.js";
 
 // Create instance
 const fastifyInstance = fastify({ logger: false });
+
+// CORS
+fastifyInstance.register(CORS);
 
 // Declare a route
 fastifyInstance.get('/popular', async () => {

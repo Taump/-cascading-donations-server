@@ -16,6 +16,7 @@
     "discord.js": "^13.3.1",
     "env-cmd": "^10.1.0",
     "fastify": "^3.23.1",
+    "fastify-cors": "^6.0.2",
     "fastify-env": "^2.1.1",
     "node-fetch": "^3.0.0",
     "obyte": "^0.1.18"
